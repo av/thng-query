@@ -1,6 +1,6 @@
 {
   "name": "thng-query",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "DSL for querying EVRYTHNG API",
   "main": "src/index.js",
   "bin": {
@@ -23,6 +23,7 @@
     "axios": "^0.17.1",
     "commander": "^2.14.1",
     "lodash": "^4.17.4",
-    "nearley": "^2.11.0"
+    "nearley": "^2.11.0",
+    "qs": "^6.5.1"
   }
 }
