@@ -1,0 +1,31 @@
+{
+  "name": "thng-query",
+  "version": "0.0.1",
+  "description": "DSL for querying EVRYTHNG API",
+  "main": "src/index.js",
+  "bin": {
+    "tq": "bin/index.js"
+  },
+  "scripts": {
+    "compile": "./node_modules/.bin/nearleyc ./src/grammar/grammar.ne --out ./src/grammar/grammar.js",
+    "debug": "npm run compile && node --inspect ./node_modules/.bin/nearley-test ./src/grammar/grammar.js --input",
+    "unparse": "./node_modules/.bin/nearley-unparse ./src/grammar/grammar.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "evrythng",
+    "API",
+    "DSL"
+  ],
+  "author": "iamfrontender",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.14.1",
+    "lodash": "^4.17.4",
+    "nearley": "^2.11.0"
+  },
+  "devDependencies": {
+    "axios": "^0.17.1",
+    "moo": "^0.4.3"
+  }
+}
