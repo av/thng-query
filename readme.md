@@ -15,6 +15,44 @@ tq.run('thngs with name Advanced* where identifiers.ser^673')
     .then(console.log)
     .catch(console.error);
 ```
+## Query syntax
+Each query consist of stages:
+```javascript
+|     fetch stage        |     filter stage         |
+'thngs with name Advanced* where identifiers.ser^673'
+```
+Each stage is independent from the other in terms of data processing. 
+Think about it as about stream. That also means independent syntax for each 
+one of them.
+#### Stages
+###### Fetch
+```javascript
+'target selector'
+'quantifier target selector'
+```
+*quantifier*
+- int string (14, 203, 1)
+*target*:
+- `thng(s)`
+- `product(s)`
+*selector*:
+- `with name` | `named`
+- `with tag` | `tagged`
+###### Filter
+```javascript
+'where filterExpression'
+```
+*filterExpression*
+- `filterField filterOperator filterValue`
+*filterField*
+- string path to a property of entity
+*filterOperator*
+- `=` - exact match
+- `~` - inclusion check
+- `^` - starts with
+- `$` - ends with
+*filterValue*
+- string
 ## Interface
 #### As library
 ```javascript
