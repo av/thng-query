@@ -25,7 +25,7 @@ Each stage is independent from the other in terms of data processing.
 Think about it as about stream. That also means independent syntax for each 
 one of them.
 #### Stages
-###### Fetch
+##### Fetch
 ```javascript
 'target selector'
 'quantifier target selector'
@@ -38,7 +38,7 @@ one of them.
 *selector*:
 - `with name` | `named`
 - `with tag` | `tagged`
-###### Filter
+##### Filter
 ```javascript
 'where filterExpression'
 ```
