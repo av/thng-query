@@ -62,8 +62,6 @@ class Pipeline {
   }
 
   afterExecute(results) {
-    debugger;
-
     this.timesExecuted += 1;
     this.done = this.until.some(
       condition => !condition(results)
